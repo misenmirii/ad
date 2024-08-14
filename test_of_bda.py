@@ -14,7 +14,6 @@ target_img_path = 'picture/original/grumpy_cat.png'
 init_img = load_image_480(init_img_path)
 target_img = load_image_480(target_img_path)
 
-
 model = efficientnet_v2_l(pretrained=True)
 attack = BoundaryAttack(model, device)
 adv_img, mean_squared_error, all_calls = (

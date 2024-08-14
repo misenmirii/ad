@@ -6,6 +6,7 @@ import time
 
 
 class BoundaryAttack:
+
     def __init__(self, model, device='cpu'):
         self.model = model.to(device).eval()
         self.device = device

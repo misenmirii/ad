@@ -37,6 +37,9 @@ def create_exp_dir(path, scripts_to_save=None):
 
 
 def show_img(adv_img, model):
+    '''
+    用于展示图片以及其在某个模型的预测概率
+    '''
     output = model(adv_img)
     _, predicted = torch.max(output, 1)
     original_label = predicted.item()
